@@ -1,46 +1,246 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Моё портфолио</title>
-    <style>
-        body {
-            background: #151820;
-            color: white;
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        h1, h2 { color: #80bfff; }
-        a { color: #80bfff; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>КУЗНЕЦОВ АКИМ</title>
+  <style>
+    :root {
+      --text: #1f1f1f;
+      --muted: #666;
+      --line: #e5e5e5;
+      --accent: #0a66c2;
+      --bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin: 0 0 10px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 0 0 15px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin: 22px 0 8px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul {
+      margin: 10px 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 25px;
+    }
+
+    .section {
+      margin-top: 42px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 280px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+      background: #fff;
+    }
+
+    .photo {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      display: block;
+    }
+
+    .photo-caption {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .skills-list li strong {
+      color: #000;
+    }
+
+    .contacts li {
+      word-break: break-word;
+    }
+
+    .footer {
+      margin-top: 45px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 28px 16px 40px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Привет! Я АКИМ КУЗНЕЦОВ</h1>
-    <p>Студент, C++ РАЗРАБОТЧИК и МЕГА КРУТОЙ ЧЕЛ.</p>
+  <div class="container">
 
-    <h2>Обо мне</h2>
-    <p>Изучаю программирование и разрабатываю собственные проекты.</p>
+    <header class="hero">
+      <div>
+        <h1>КУЗНЕЦОВ АКИМ</h1>
+        <p class="subtitle">
+          Гений, миллиардер, плейбой, филантроп и просто программист НИУ ВШЭ ШИФТ ПИКИ.
+        </p>
 
-    <h2>Мои навыки</h2>
-    <ul>
-        <li>Python</li>
-        <li>C++</li>
-        <li>Unreal Engine 5</li>
-        <li>С#</li>
-        <li>Git</li>
-    </ul>
+        <p>
+          Добро пожаловать на мою страницу-портфолио. Я занимаюсь программированием,
+          люблю игры и развиваюсь в направлении геймдева, разработки и проектирования
+          собственных проектов.
+        </p>
 
-    <h2>Мои проекты</h2>
-    <p>Разработка компьютерной игры на Unreal Engine 5.</p>
+        <p>
+          Если кратко: будущий главный разработчик игр и геймдизайнер всея Руси.
+        </p>
+      </div>
 
-    <h2>Контакты</h2>
-    <a href="https://github.com/blazeegoingcrazy">Мой GitHub</a>
-    <a href="https://t.me/@blzgc">Мой Tg</a>
-  
+      <div class="card">
+        <img src="tony.jpg" alt="Тони Старк" class="photo">
+        <div class="photo-caption">Визуализация моего внутреннего состояния</div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Обо мне</h2>
+      <div class="split">
+        <div>
+          <p>
+            С 10 лет занимаюсь программированием на C++, 
+              люблю игры, учусь на будущего главного разработчика игр 
+              и геймдизайнера всея Руси
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="me.jpg" alt="Это я кстати" class="photo">
+          <div class="photo-caption">просто я</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Навыки</h2>
+      <div class="split">
+        <div>
+          <ul class="skills-list">
+            <li><strong>C++</strong></li>
+            <li><strong>Git</strong> </li>
+            <li><strong>UE5</strong> </li>
+            <li><strong>C#</strong> </li>
+            <li><strong>Python</strong> — если лев и прогал на питоне, то без удовольствия.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img src="lion.jpg" alt="Мем ну типа" class="photo">
+          <div class="photo-caption">ПИthon</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Опыт</h2>
+
+      <h3>Пишу хоррор-игру целый год</h3>
+      <h3>Telegram-боты на заказ</h3>
+      <h3>Desktop-приложения на Qt</h3>
+    </section>
+
+    <section class="section">
+      <h2>Достижения</h2>
+      <ul>
+        <li>Дожил до 17 лет.</li>
+        <li>Пью магний внутривенно.</li>
+        <li>Уже год разрабатываю собственную хоррор-игру и не сошёл с ума <3</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Контакты</h2>
+      <ul class="contacts">
+        <li>GitHub: <a href="https://github.com/blazeegoingcrazy" target="_blank">github.com/blazeegoingcrazy</a></li>
+        <li>Telegram: <a href="https://t.me/blzgc" target="_blank">@blzgc</a></li>
+      </ul>
+    </section>
+  </div>
 </body>
 </html>
